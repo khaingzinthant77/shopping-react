@@ -1,5 +1,6 @@
 import React from 'react'
 import CategoryBtn from './CategoryBtn';
+import Container from './Container';
 
 const CategorySection = () => {
     const categories = [
@@ -10,16 +11,15 @@ const CategorySection = () => {
       ];
   return (
     <section className='px-5'>
-        <p className='text-sm text-gray-500 mb-2'>Product Category</p>
-        <div className='flex overflow-scroll cat_container'>
-        <CategoryBtn category={'All'} current={true}/>
-      {
-        categories.map((category)=>{
-            return <CategoryBtn category={category} key={category} current={false}/>
-        })
-      }
-        </div>
-        
+          <p className='text-sm text-gray-500 mb-2'>Product Category</p>
+          <div className='flex overflow-scroll cat_container'>
+          <CategoryBtn category={'All'} current={true}/>
+        {
+          categories.map((category)=>{
+              return <CategoryBtn category={category} key={category} current={false}/>
+          })
+        }
+          </div>
     </section>
   )
 }
